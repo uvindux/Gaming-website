@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create an account to access exclusive games and offers.">
+    <meta name="keywords" content="register gaming account, sign up, online gaming membership">
+    <title>Register | Online Gaming</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="Online Gaming Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="events.html">Events & News</a></li>
+                <li><a href="discounts.html">Deals & Membership</a></li>
+                <li><a href="contact_us.html">Contact</a></li>
+                <li><a href="register.html" class="cta-button">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Registration Section -->
+    <section class="register">
+        <h1>Create Your Gaming Account</h1>
+        <p>Sign up now to access exclusive games, events, and membership perks.</p>
+
+        <!-- Registration Form -->
+        <form action="submit-registration.php" method="post" class="register-form" id="registerForm">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <button type="submit" class="cta-button">Register</button>
+        </form>
+
+        <p>Already have an account? <a href="#">Log in here</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Online Gaming. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Form Validation -->
+    <script>
+        document.getElementById("registerForm").addEventListener("submit", function(event) {
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirm-password").value;
+            
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                event.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>
