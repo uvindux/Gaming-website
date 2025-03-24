@@ -55,13 +55,20 @@
                 </li>
                 <li><a href="#">News</a></li>
                 <li><a href="#">Membership</a></li>
-                <li><div class="dark-mode-text" id="darkModeText"></div></li>
+                <li><div class="toggle-container" id="myToggle">
+                    <div class="toggle-slider"></div>
+                  </div></li>
             </ul>
         </nav>
 
         <div class="header-right">
             <input type="text" placeholder="Search..." class="search-bar" />
             <button class="btn">Contact Us</button>
+            <button class="btn" id="nightMode" onclick="nightmodeToggle()">
+                Night mode 
+                <img src="images/Night mode.png" alt="Night mode icon">
+            </button>
+            
         </div>
     </header>
 
@@ -119,68 +126,67 @@
             <!-- Team Member 1 -->
             <div class="team-card">
                 <div class="member-image-container">
-                    <img src="https://via.placeholder.com/120" alt="Alex Smith" class="member-image">
+                    <img src="/images/Men1.jpg" alt="Alex Smith" class="member-image">
                 </div>
-                <h3 class="member-name">Alex Smith</h3>
-                <p class="member-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-                <p class="member-position">Creative Leader</p>
+                <h3 class="member-name">Ahmad Johnson</h3>
+                <p class="member-bio">
+                    Ahmad drives innovative game development, blending creativity and technical expertise to deliver immersive gaming experiences</p>
+                <p class="member-position">Chief Game Developer</p>
                 <div class="social-links">
-                    <a href="#" class="social-icon">f</a>
-                    <a href="#" class="social-icon">t</a>
-                    <a href="#" class="social-icon">ig</a>
+                    <a href="#" class="social-icon"><img src="/images/fb.png" alt="" srcset=""></a>
+                    <a href="#" class="social-icon"><img src="/images/linkedin.png" alt="" srcset=""></a>
+                    <a href="#" class="social-icon"><img src="/images/insta (1).png" alt="" srcset=""></a>
                 </div>
             </div>
 
             <!-- Team Member 2 -->
             <div class="team-card">
                 <div class="member-image-container">
-                    <img src="https://via.placeholder.com/120" alt="May Brown" class="member-image">
+                    <img src="/images/Men2.jpg" alt="May Brown" class="member-image">
                 </div>
-                <h3 class="member-name">May Brown</h3>
-                <p class="member-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-                <p class="member-position">Sales Manager</p>
+                <h3 class="member-name">Jana Sanchez</h3>
+                <p class="member-bio">
+                    Jana designs intuitive, user-centered experiences, ensuring seamless interactions that engage and delight our players every time.</p>
+                <p class="member-position">User Experience Designer</p>
                 <div class="social-links">
-                    <a href="#" class="social-icon">f</a>
-                    <a href="#" class="social-icon">t</a>
-                    <a href="#" class="social-icon">ig</a>
+                    <a href="#" class="social-icon"><img src="/images/fb.png" alt="" srcset=""></a>
+                    <a href="#" class="social-icon"><img src="/images/linkedin.png" alt="" srcset=""></a>
+                    <a href="#" class="social-icon"><img src="/images/insta (1).png" alt="" srcset=""></a>
                 </div>
             </div>
 
             <!-- Team Member 3 -->
             <div class="team-card">
                 <div class="member-image-container">
-                    <img src="https://via.placeholder.com/120" alt="Ann Richmond" class="member-image">
+                    <img src="/images/Women1.jpg" alt="Ann Richmond" class="member-image">
                 </div>
-                <h3 class="member-name">Ann Richmond</h3>
-                <p class="member-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-                <p class="member-position">Web Developer</p>
+                <h3 class="member-name">Chen Lee </h3>
+                <p class="member-bio">
+                    Chen leads customer support with dedication, resolving issues quickly while maintaining a positive, helpful experience for users.</p>
+                <p class="member-position">Customer Support Manager</p>
                 <div class="social-links">
-                    <a href="#" class="social-icon">f</a>
-                    <a href="#" class="social-icon">t</a>
-                    <a href="#" class="social-icon">ig</a>
+                    <a href="#" class="social-icon"><img src="/images/fb.png" alt="" srcset=""></a>
+                    <a href="#" class="social-icon"><img src="/images/linkedin.png" alt="" srcset=""></a>
+                    <a href="#" class="social-icon"><img src="/images/insta (1).png" alt="" srcset=""></a>
                 </div>
             </div>
 
             <!-- Team Member 4 -->
             <div class="team-card">
                 <div class="member-image-container">
-                    <img src="https://via.placeholder.com/120" alt="Roxie Swanson" class="member-image">
+                    <img src="/images/Women2.jpg" alt="Roxie Swanson" class="member-image">
                 </div>
-                <h3 class="member-name">Roxie Swanson</h3>
-                <p class="member-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-                <p class="member-position">Web Designer</p>
+                <h3 class="member-name">Sophie Clark </h3>
+                <p class="member-bio" id="memberCard">
+                    Sophie fosters meaningful connections through strategic marketing, engaging our community, and promoting our brand with creativity.</p>
+                <p class="member-position">Marketing Maneger</p>
                 <div class="social-links">
-                    <a href="#" class="social-icon">f</a>
-                    <a href="#" class="social-icon">t</a>
-                    <a href="#" class="social-icon">ig</a>
+                    <a href="#" class="social-icon"><img src="/images/fb.png" alt="" srcset=""></a>
+                    <a href="#" class="social-icon"><img src="/images/linkedin.png" alt="" srcset=""></a>
+                    <a href="#" class="social-icon"><img src="/images/insta (1).png" alt="" srcset=""></a>
                 </div>
             </div>
         </div>
-
-        <div class="footer-credit">
-            Images by Freepik
-        </div>
-   
 </section>
 
 
@@ -236,7 +242,7 @@
             <a href="#"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
-    <script defer src="/js/script.js"></script>
+    <script  src="/js/script.js"></script>
 </body>
 
 </html>

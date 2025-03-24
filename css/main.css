@@ -167,6 +167,12 @@
         .btn:hover {
             background-color: #43a8c4;
         }
+        #nightMode{
+            background-color: green;
+        }
+        #nightMode img{
+            width: 12px;
+        }
 
         /* Mobile Menu Toggle */
         .menu-toggle {
@@ -333,99 +339,9 @@ footer {
     color: #ffcc00;
 }
 
-/* Dark Mode */
-.dark-mode {
-    background-color: #222;
-    color: white;
-}
 
-.dark-mode header, .dark-mode footer {
-    background-color: black;
-}
 
-.dark-mode .game {
-    background-color: #333;
-    color: white;
-}
 
-/* Dark Mode Toggle Button */
-/* Sticky Dark Mode Toggle Button */
-.dark-mode {
-    background-color: black;
-    color: white;
-  }
-  .dark-mode-button {
-    position: relative;
-    width: 150px;
-    height: 70px;
-    background-color: #ccc;
-    border-radius: 35px;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
-}
-
-.dark-mode-button::before {
-    content: '';
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background-color: white;
-    border-radius: 50%;
-    top: 5px;
-    left: 5px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.dark-mode-button::after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: transparent;
-    border-radius: 50%;
-    top: 25px;
-    left: 20px;
-    box-shadow: 0 0 5px 2px yellow;
-    transition: opacity 0.3s ease;
-    opacity: 0;
-}
-
-.dark-mode-button.dark::before {
-    transform: translateX(80px);
-    background-color: #333;
-}
-
-.dark-mode-button.dark::after {
-    opacity: 1;
-}
-
-.dark-mode-button.dark {
-    background-color: #333;
-}
-
-.dark-mode-text {
-    position: absolute;
-    bottom: -50px;
-    font-size: 2em;
-    font-weight: bold;
-    color: #333;
-    transition: color 0.3s ease;
-}
-
-body.dark-mode {
-    background-color: #121212;
-    color: white;
-}
-
-.dark-mode-text.dark {
-    color: white;
-}
- /* Who we are section styles */
  .who-we-are {
     max-width: 1200px;
     margin: 0 auto;

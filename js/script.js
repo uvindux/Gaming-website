@@ -94,8 +94,30 @@ document.getElementById("registerForm")?.addEventListener("submit", function (ev
     }
 });
 
-/* toggle dark mode button*/
-function myFunction() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
- }
+        // Declare the mode variable in the global scope
+     
+
+      // Global variable to track the current mode
+
+        // Function to toggle night mode
+        function nightmodeToggle() {
+            let mode = 0;
+            switch (mode) {
+               
+                case 0:
+                   
+                    document.body.style.backgroundColor = "#09182b"; // Dark mode
+                    document.querySelectorAll("p").forEach(p => p.style.color = "#ffffff");
+                    console.log("Switched to dark mode");
+                    mode = 1;
+                    break;
+                case 1:
+                    mode = 0;
+                    document.body.style.backgroundColor = "#ffffff"; // Light mode
+                    document.querySelectorAll("p").forEach(p => p.style.color = "#000000");
+                   document.getElementById("memberCard").style.color="#09182b";
+                    console.log("Switched to light mode");
+                    break;
+            }
+        }
+        
