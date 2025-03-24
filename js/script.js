@@ -94,29 +94,8 @@ document.getElementById("registerForm")?.addEventListener("submit", function (ev
     }
 });
 
-// Dark Mode Toggle
-document.addEventListener("DOMContentLoaded", function () {
-    let header = document.querySelector("header");
-
-    // Check if header exists before inserting the button
-    if (header) {
-        let darkModeToggle = document.createElement("button");
-        darkModeToggle.innerText = "Toggle Dark Mode";
-        darkModeToggle.classList.add("dark-mode-toggle");
-        header.appendChild(darkModeToggle);
-
-        // Toggle Dark Mode
-        darkModeToggle.addEventListener("click", function () {
-            document.body.classList.toggle("dark-mode");
-            localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
-        });
-
-        // Maintain user preference
-        if (localStorage.getItem("darkMode") === "true") {
-            document.body.classList.add("dark-mode");
-        }
-    } else {
-        console.error("Header not found! Ensure all pages have a <header> element.");
-    }
-});
-
+/* toggle dark mode button*/
+function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+ }
