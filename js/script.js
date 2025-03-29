@@ -120,4 +120,102 @@ document.getElementById("registerForm")?.addEventListener("submit", function (ev
                     break;
             }
         }
+
+        //Game Product ,popular games javascrip codeline
+        document.querySelectorAll('.product-image').forEach(image => {
+            image.addEventListener('click', function() {
+                // Remove enlarged class from any previously enlarged image
+                const currentEnlarged = document.querySelector('.product-image.enlarged');
+                if (currentEnlarged) {
+                    currentEnlarged.classList.remove('enlarged');
+                }
+
+                // Toggle enlarged class on clicked image
+                this.classList.toggle('enlarged');
+
+                // Add click event to remove enlargement when clicking outside
+                if (this.classList.contains('enlarged')) {
+                    const removeEnlargement = (e) => {
+                        if (!this.contains(e.target)) {
+                            this.classList.remove('enlarged');
+                            document.removeEventListener('click', removeEnlargement);
+                        }
+                    };
+                    document.addEventListener('click', removeEnlargement);
+                }
+            });
+        });
+
+        //Contact us section validation js
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const messageInput = document.getElementById('message');
+            const nameError = document.getElementById('nameError');
+            const emailError = document.getElementById('emailError');
+            const messageError = document.getElementById('messageError');
+
+            // Email validation regex
+            document.addEventListener('DOMContentLoaded', function() {
+                const form = document.getElementById('contactForm');
+                const nameInput = document.getElementById('name');
+                const emailInput = document.getElementById('email');
+                const nameError = document.getElementById('nameError');
+                const emailError = document.getElementById('emailError');
+    
+                // Function to show error message
+                function showError(input, errorElement) {
+                    errorElement.style.display = 'block';
+                    input.classList.add('input-error');
+                }
+    
+                // Function to hide error message
+                function hideError(input, errorElement) {
+                    errorElement.style.display = 'none';
+                    input.classList.remove('input-error');
+                }
+    
+                // Real-time validation for name
+                nameInput.addEventListener('input', function() {
+                    if (this.value.trim() === '') {
+                        showError(nameInput, nameError);
+                    } else {
+                        hideError(nameInput, nameError);
+                    }
+                });
+    
+                // Real-time validation for email
+                emailInput.addEventListener('input', function() {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(this.value)) {
+                        showError(emailInput, emailError);
+                    } else {
+                        hideError(emailInput, emailError);
+                    }
+                });
+    
+                // Form submission validation
+                form.addEventListener('submit', function(event) {
+                    // Prevent form submission
+                    event.preventDefault();
+    
+                    // Name validation
+                    if (nameInput.value.trim() === '') {
+                        showError(nameInput, nameError);
+                        return;
+                    }
+    
+                    // Email validation
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(emailInput.value)) {
+                        showError(emailInput, emailError);
+                        return;
+                    }
+    
+                    // If all validations pass, you can submit the form
+                    alert('Form submitted successfully!');
+                });
+            });
         
