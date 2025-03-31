@@ -1,48 +1,34 @@
-// Function to load HTML content into a div
-function loadComponent(elementId, filePath, callback) {
-    fetch(filePath)
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById(elementId).innerHTML = data;
-            if (callback) callback(); // Call the function after loading
-        })
-        .catch(error => console.error(`Error loading ${filePath}:`, error));
-}
-
-// Load Navbar and Footer
-document.addEventListener("DOMContentLoaded", function() {
-    loadComponent("navbar", "components/navbar.html", attachNightModeListener);
-    loadComponent("footer", "components/footer.html");
-});
-
 // Function to attach night mode toggle AFTER navbar loads
 function attachNightModeListener() {
     let mode = 0; // Start in light mode
-
-    // Ensure the button exists before adding the event listener
-    let nightModeButton = document.getElementById("nightMode");
+    
+    // Find the night mode button
+    const nightModeButton = document.getElementById('nightMode'); // Use your actual button ID
+    
+    // Add click event listener to the button
     if (nightModeButton) {
-        nightModeButton.addEventListener("click", nightmodeToggle);
-    }
-
-    function nightmodeToggle() {
-        if (mode === 0) {
-            // Switch to Dark Mode
-            document.body.style.backgroundColor = "#09182b";
-            document.querySelectorAll("p").forEach(p => p.style.color = "#ffffff");
-            console.log("Switched to dark mode");
-            mode = 1;
-        } else {
-            // Switch to Light Mode
-            document.body.style.backgroundColor = "#ffffff";
-            document.querySelectorAll("p").forEach(p => p.style.color = "#000000");
-            console.log("Switched to light mode");
-            mode = 0;
-        }
+        nightModeButton.addEventListener('click', function() {
+            if (mode === 0) {
+                // Switch to Dark Mode
+                document.body.style.backgroundColor = "#09182b";
+                document.querySelectorAll("p").forEach(p => p.style.color = "#ffffff");
+                console.log("Switched to dark mode");
+                mode = 1;
+            } else {
+                // Switch to Light Mode
+                document.body.style.backgroundColor = "#ffffff";
+                document.querySelectorAll("p").forEach(p => p.style.color = "#000000");
+                console.log("Switched to light mode");
+                mode = 0;
+            }
+        });
+    } else {
+        console.error("Night mode button not found!");
     }
 }
 
-
+// Call the function when the document is ready
+document.addEventListener('DOMContentLoaded', attachNightModeListener);
 // Toggle mobile menu
 const menuToggle = document.querySelector('.menu-toggle');
 const navMenu = document.querySelector('nav ul');
