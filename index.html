@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +9,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/home.css">
 
-    <script src="https://kit.fontawesome.com/YOUR_FA_KIT.js" crossorigin="anonymous"></script>
+   
 </head>
 
 <body>
@@ -18,7 +17,7 @@
     <!-- Header & Navigation -->
     <header>
         <div class="logo">
-            <img src="images/Logo OG 1.jpg" alt="Logo" class="logo-img" />
+           <a href="index.html"><img src="images/Logo OG 1.jpg" alt="Logo" class="logo-img" /></a> 
             Online Gaming
         </div>
 
@@ -30,31 +29,31 @@
 
         <nav aria-label="Main Navigation">
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
-                    <button class="dropbtn">Games
+                    <button class="dropbtn">Game Hub
                         <img src="images/dropdown.png" alt="Dropdown arrow">
                     </button>
                     <div class="dropdown-content">
-                        <a href="#">Fantasy Quest </a>
-                        <a href="#">Speed Racer</a>
-                        <a href="#">Puzzle Master</a>
-                        <a href="#">Zombie Invasion</a>
-                        <a href="#">Mystery Mansion</a>
-                        <a href="#">Space Explorer</a>
-                        <a href="#">Chess Master</a>
-                        <a href="#">Word Wizard</a>
-                        <a href="#">Farm Frenzy </a>
-                        <a href="#">Battle Arena</a>
-                        <a href="#">Magic Academy</a>
-                        <a href="#">Sudoku Solver</a>
-                        <a href="#">Treasure Hunt</a>
-                        <a href="#">Card Clash</a>
-                        <a href="#">City Builder</a>
+                        <a href="FantasyQuestGame.html">Fantasy Quest </a>
+                        <a href="/GamePages/SpeedRacer.html">Speed Racer</a>
+                        <a href="/GamePages/PuzzleMaster.html">Puzzle Master</a>
+                        <a href="/GamePages/ZombieInvasion.html">Zombie Invasion</a>
+                        <a href="/GamePages/MysteryMansion.html">Mystery Mansion</a>
+                        <a href="/GamePages/SpaceExplorer.html">Space Explorer</a>
+                        <a href="/GamePages/ChessMaster.html">Chess Master</a>
+                        <a href="/GamePages/WordWizard.html">Word Wizard</a>
+                        <a href="/GamePages/FarmFrenzy.html">Farm Frenzy </a>
+                        <a href="/GamePages/BattleArena.html">Battle Arena</a>
+                        <a href="/GamePages/MagicAcademy.html">Magic Academy</a>
+                        <a href="/GamePages/SudokuSolver.html">Sudoku Solver</a>
+                        <a href="/GamePages/TreasureHunt.html">Treasure Hunt</a>
+                        <a href="/GamePages/CardClash.html">Card Clash</a>
+                        <a href="/GamePages/CityBuilder.html">City Builder</a>
                     </div>
                 </li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">Membership</a></li>
+                <li><a href="#Events">Event Calendar</a></li>
+                <li><a href="#promo-Banner">Membership</a></li>
                 <li>
                     <div class="toggle-container" id="myToggle">
                         <div class="toggle-slider"></div>
@@ -64,9 +63,9 @@
         </nav>
 
         <div class="header-right">
-            <input type="text" placeholder="Search..." class="search-bar" />
-            <button class="btn">Contact Us</button>
-            <button class="btn" id="nightMode" onclick="nightmodeToggle()">
+            <input type="text" placeholder="Search..." onkeyup="myFunction()" class="search-bar"  />
+            <a href="#ContactForm"><button class="btn">Contact Us</button></a>
+            <button class="btn" id="nightMode">
                 Night mode
                 <img src="images/Night mode.png" alt="Night mode icon">
             </button>
@@ -80,7 +79,7 @@
     <section class="hero">
         <h1>Welcome to Online Gaming – Play, Compete, Enjoy!</h1>
         <div class="paraHero">
-            <p> Explore a world
+            <p style="color: white;"> Explore a world
                 of thrilling games and challenges.</p>
 
         </div>
@@ -88,13 +87,14 @@
     </section>
 
     <!-- Deals & Discounts Section -->
-    <div class="promo-banner">
+    <div class="promo-banner" id="promo-Banner">
         <h2 class="promo-heading">
             <span class="fire-emoji">🔥</span>
             Limited-Time Deals! Get Your Favorite Games at Up to <span class="discount-highlight">50% OFF!</span>
             <span class="fire-emoji">🔥</span>
         </h2>
-        <button class="deals-button">View Deals</button>
+        <a href="games.html">  <button class="deals-button">View Deals</button></a>
+      
     </div>
 
     <!--Who we are-->
@@ -111,7 +111,7 @@
                 without delay. With a strong focus on customer satisfaction, secure transactions, and a seamless
                 shopping experience, we aim to be the ultimate destination for gamers everywhere. Level up your gaming
                 journey with us! 🚀🎮</p>
-            <a href="#" class="cta-button" id="explore">
+            <a href="games.html" class="cta-button" id="explore">
                 Explore our services
                 <span class="arrow">→</span>
             </a>
@@ -128,6 +128,8 @@
             </div>
         </div>
     </section>
+    <!--Our team-->
+
     <section class="team-section">
         <h2 class="section-title">Meet Our Team</h2>
         <p>Our team is a passionate group of innovators, creators, and problem-solvers dedicated to delivering
@@ -226,10 +228,10 @@
 
         <div class="Game-product-grid" id="GamesList" >
             <div class="product-card">
-                <img src="/images/Leonardo_Phoenix_09_Create_a_series_of_mystifying_futuristic_a_2.jpg" alt="Avada"
+                <img src="images/Fantasy_Quest_Game.jpg" alt="Avada"
                     class="product-image">
                 <div class="product-details">
-                    <h3 class="product-title">Fantasy Quest An
+                    <h3 class="product-title" style="color: black;">Fantasy Quest An
                         immersive roleplaying game
                         where players
                         embark on epic
@@ -238,16 +240,16 @@
                     <div class="product-meta">
                         <span class="product-price">Free</span>
                         <div class="product-actions">
-                            <a href="#" class="btn-preview">Live Preview</a>
+                            <a href="#" class="btn-preview">Discover More</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="product-card">
-                <img src="/images/Leonardo_Phoenix_10_A_futuristic_and_immersive_gaming_scene_fe_0.jpg" alt="The7"
+                <img src="images/Speed_Racer_Game.jpg" alt="SpeedRacer"
                     class="product-image">
                 <div class="product-details">
-                    <h3 class="product-title">Speed Racer - A
+                    <h3 class="product-title" style="color: black;">Speed Racer - A
                         high-speed racing
                         game with realistic
                         graphics and
@@ -256,16 +258,16 @@
                     <div class="product-meta">
                         <span class="product-price">£4.99</span>
                         <div class="product-actions">
-                            <a href="#" class="btn-preview">Live Preview</a>
+                            <a href="#" class="btn-preview">Discover More</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="product-card">
-                <img src="/images/Leonardo_Phoenix_10_Create_a_dramatic_landscape_image_for_the_2.jpg" alt="Betheme"
+                <img src="images/Puzzle_Master_Game.jpg"
                     class="product-image">
                 <div class="product-details">
-                    <h3 class="product-title">Puzzle Master - A
+                    <h3 class="product-title" style="color: black;">Puzzle Master - A
                         brain-teasing
                         puzzle game with
                         varying levels of
@@ -275,16 +277,16 @@
                         <span class="product-price">Free</span> <br />
 
                         <div class="product-actions">
-                            <a href="#" class="btn-preview">Live Preview</a>
+                            <a href="#" class="btn-preview">Discover More</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="product-card">
-                <img src="/images/Leonardo_Phoenix_10_i_need_image_to_add_to_herosectionthis_web_0.jpg" alt="Enfold"
+                <img src="images/Mystery_Mansion_Game.jpg"
                     class="product-image">
                 <div class="product-details">
-                    <h3 class="product-title">Mystery Mansion -
+                    <h3 class="product-title" style="color: black;">Mystery Mansion -
                         A hidden object
                         game set in a
                         spooky mansion
@@ -293,16 +295,16 @@
                     <div class="product-meta">
                         <span class="product-price"> £1.99</span>
                         <div class="product-actions">
-                            <a href="#" class="btn-preview">Live Preview</a>
+                            <a href="#" class="btn-preview">Discover More</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="product-card">
-                <img src="/images/Leonardo_Phoenix_10_i_need_image_to_add_to_herosectionthis_web_1.jpg" alt="Flatsome"
+                <img src="images/Space_Explorer_Game.jpg"
                     class="product-image">
                 <div class="product-details">
-                    <h3 class="product-title">Space Explorer - A
+                    <h3 class="product-title" style="color: black;">Space Explorer - A
                         sci-fi adventure
                         game that takes
                         players on a space
@@ -311,16 +313,16 @@
                     <div class="product-meta">
                         <span class="product-price">£3.99</span>
                         <div class="product-actions">
-                            <a href="#" class="btn-preview">Live Preview</a>
+                            <a href="#" class="btn-preview">Discover More</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="product-card">
-                <img src="/images/Leonardo_Phoenix_10_Create_a_dramatic_landscape_image_for_the_2.jpg" alt="X Theme"
+                <img src="/images/Chess_Master_Game.jpg"
                     class="product-image">
                 <div class="product-details">
-                    <h3 class="product-title">Chess Master - A
+                    <h3 class="product-title" style="color: black;">Chess Master - A
                         classic chess game
                         with advanced AI
                         opponents with brainstroaming</h3>
@@ -329,7 +331,7 @@
                         <span class="product-price">Free
                         </span>
                         <div class="product-actions">
-                            <a href="#" class="btn-preview">Live Preview</a>
+                            <a href="#" class="btn-preview">Discover More</a>
                         </div>
                     </div>
                 </div>
@@ -337,7 +339,7 @@
         </div>
        
     </section>
-    <a href="games.html">  <button class="seeMore">See more </button></a>
+    <a href="games.html">  <button class="seeMore">Explore more </button></a>
   
 
   
@@ -361,7 +363,7 @@
 <div class="container">
 
   
-    <div class="form-section">
+    <div class="form-section" id="ContactForm">
       
         <form id="contactForm">
             <div class="form-group">
@@ -407,6 +409,84 @@
         </form>
     </div>
 </div>
+<!--Events section-->
+<section class="events-section"  >
+    <div class="section-header">
+        <h2 id="Events" >Upcoming Events</h2>
+        <p>Join us at the hottest gaming events of the year</p>
+      </div>
+    <div class="container">
+      
+      
+      <div class="events-container">
+        <!-- Event 1 -->
+        <div class="event-card">
+          <div class="event-image">
+            <img src="images/Game event 1.jpg" alt="Championship Tournament">
+            <div class="event-date">APR 15</div>
+          </div>
+          <div class="event-content">
+            <h3>Esports Championship Tournament</h3>
+            <p>The ultimate gaming showdown featuring top teams competing for a $100,000 prize pool.</p>
+            <div class="event-meta">
+              <div class="event-location">
+                <svg width="16" height="16" viewBox="0 0 24 24">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                Los Angeles Convention Center
+              </div>
+            </div>
+            <a href="#" class="event-button">Register Now</a>
+          </div>
+        </div>
+        
+        <!-- Event 2 -->
+        <div class="event-card">
+          <div class="event-image">
+            <img src="images/event 2.jpg" alt="Gaming Expo">
+            <div class="event-date">MAY 20</div>
+          </div>
+          <div class="event-content">
+            <h3>Next-Gen Gaming Expo</h3>
+            <p>Experience the future of gaming with exclusive previews of upcoming AAA titles and hardware.</p>
+            <div class="event-meta">
+              <div class="event-location">
+                <svg width="16" height="16" viewBox="0 0 24 24">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                Tokyo Game Center
+              </div>
+            </div>
+            <a href="#" class="event-button">Get Tickets</a>
+          </div>
+        </div>
+        
+        <!-- Event 3 -->
+        <div class="event-card">
+          <div class="event-image">
+            <img src="images/Zombie_Invasion_Game.jpg" alt="Developer Conference">
+            <div class="event-date">JUN 8</div>
+          </div>
+          <div class="event-content">
+            <h3>Game Developers Conference</h3>
+            <p>Connect with industry professionals and learn from the best in game development.</p>
+            <div class="event-meta">
+              <div class="event-location">
+                <svg width="16" height="16" viewBox="0 0 24 24">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                San Francisco Tech Hub
+              </div>
+            </div>
+            <a href="#" class="event-button">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  
 
    <!--Footer--> 
 <section class="footer">
@@ -414,18 +494,21 @@
           <div class="footer-col">
             <h4>Info</h4>
             <ul class="links">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Compressions</a></li>
-              <li><a href="#">Customers</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="games.html">Games Hub</a></li>
+              <li><a href="#">Reviews</a></li>
+              <p> BBC Gaming - https://www.bbc.co.uk/news/topics/c008ql15vdxt  </p>
+            
             
             </ul>
           </div>
           <div class="footer-col">
             <h4>Explore</h4>
             <ul class="links">
-              <li><a href="#">Free Designs</a></li>
-              <li><a href="#">Latest Designs</a></li>
-              <li><a href="#">Themes</a></li>
+              <li><a href="#">Discounts</a></li>
+              <li><a href="#Events">Events</a></li>
+              <li><a href="#">News</a></li>
+              <p>IGN Gaming Tips - https://www.ign.com/wikis  </p>
            
             </ul>
           </div>
@@ -449,19 +532,14 @@
               <input type="text" placeholder="Your email" required>
               <button type="submit">SUBSCRIBE</button>
             </form>
-            <div class="icons">
-              <i class="fa-brands fa-facebook-f"></i>
-              <i class="fa-brands fa-twitter"></i>
-              <i class="fa-brands fa-linkedin"></i>
-              <i class="fa-brands fa-github"></i>
-            </div>
+           
           </div>
         </div>
       
       </section> 
      
     
-    <script src="/js/script.js"></script>
+  <script src="/js/script.js"></script>  
 </body>
 
 </html>

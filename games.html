@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore our collection of exciting online games. Play now or purchase premium editions.">
+    <meta name="description"
+        content="Explore our collection of exciting online games. Play now or purchase premium editions.">
     <meta name="keywords" content="online games, play games, free trials, gaming platform, buy games">
     <title>Games | Online Gaming</title>
     <link rel="stylesheet" href="css/main.css">
@@ -11,8 +13,8 @@
     <link rel="stylesheet" href="css/MainGamePage.css">
     <script defer src="js/script.js"></script>
 </head>
-<body>
 
+<body>
     <!-- Header & Navigation -->
     <header>
         <div class="logo">
@@ -34,7 +36,7 @@
                         <img src="images/dropdown.png" alt="Dropdown arrow">
                     </button>
                     <div class="dropdown-content">
-                        <a href="#">Fantasy Quest </a>
+                        <a href="/FantasyQuestGame.html">Fantasy Quest </a>
                         <a href="#">Speed Racer</a>
                         <a href="#">Puzzle Master</a>
                         <a href="#">Zombie Invasion</a>
@@ -62,9 +64,11 @@
         </nav>
 
         <div class="header-right">
-            <input type="text" placeholder="Search..." class="search-bar" />
-            <button class="btn">Contact Us</button>
-            <button class="btn" id="nightMode" onclick="nightmodeToggle()">
+          
+            <input type="text" placeholder="Search..." onkeyup="myFunction()" class="search-bar"  />
+            
+            <button class="btn" style="margin-left: 100px; width: 150px; margin-right: 40px; ">Contact Us</button>
+        <button class="btn" id="nightMode" onclick="nightmodeToggle()" style="width: 150px;"> 
                 Night mode
                 <img src="images/Night mode.png" alt="Night mode icon">
             </button>
@@ -72,12 +76,11 @@
         </div>
     </header>
     <!--Header Banner-->
-    <body>
-        <section class="GamepageBanner">
-   
-        </section>
-        <!--Filter Games section-->
-       <section class="gamesection">
+    <section class="GamepageBanner">
+
+    </section>
+    <!--Filter Games section-->
+    <section class="gamesection">
         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
         <div id="myBtnContainer">
             <button class="btn active" onclick="filterSelection('all')"> Show all</button>
@@ -85,341 +88,419 @@
             <button class="btn" onclick="filterSelection('animals')"> Animals</button>
             <button class="btn" onclick="filterSelection('fruits')"> Fruits</button>
             <button class="btn" onclick="filterSelection('colors')"> Colors</button>
-          </div>
-
-
-       </section>
-            
-    
-        <!--Games products 15-->
-        <section class="Game-product-grid" id="GamesList">
-            <div class="product-card">
-                <img src="/images/Leonardo_Phoenix_09_Create_a_series_of_mystifying_futuristic_a_2.jpg" alt="Avada"
-                    class="product-image">
-                <div class="product-details">
-                    <h3 class="product-title">Fantasy Quest An
-                        immersive roleplaying game
-                        where players
-                        embark on epic
-                        adventures</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus optio debitis!</p>
-                    <div class="product-meta">
-                        <span class="product-price">Free</span>
-                        <div class="product-actions">
-                            <a href="#" class="btn-preview">Live Preview</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="/images/Leonardo_Phoenix_10_A_futuristic_and_immersive_gaming_scene_fe_0.jpg" alt="The7"
-                    class="product-image">
-                <div class="product-details">
-                    <h3 class="product-title">Speed Racer - A
-                        high-speed racing
-                        game with realistic
-                        graphics and
-                        challenging tracks. </h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque perspiciatis ad minus.</p>
-                    <div class="product-meta">
-                        <span class="product-price">£4.99</span>
-                        <div class="product-actions">
-                            <a href="#" class="btn-preview">Live Preview</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="/images/Leonardo_Phoenix_10_Create_a_dramatic_landscape_image_for_the_2.jpg" alt="Betheme"
-                    class="product-image">
-                <div class="product-details">
-                    <h3 class="product-title">Puzzle Master - A
-                        brain-teasing
-                        puzzle game with
-                        varying levels of
-                        difficulty with mind stroming game.</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis velit reiciendis quia.</p>
-                    <div class="product-meta">
-                        <span class="product-price">Free</span> <br />
-
-                        <div class="product-actions">
-                            <a href="#" class="btn-preview">Live Preview</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="/images/Leonardo_Phoenix_10_i_need_image_to_add_to_herosectionthis_web_0.jpg" alt="Enfold"
-                    class="product-image">
-                <div class="product-details">
-                    <h3 class="product-title">Mystery Mansion -
-                        A hidden object
-                        game set in a
-                        spooky mansion
-                        filled with secrets in game world </h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda nobis commodi corporis.</p>
-                    <div class="product-meta">
-                        <span class="product-price"> £1.99</span>
-                        <div class="product-actions">
-                            <a href="#" class="btn-preview">Live Preview</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="/images/Leonardo_Phoenix_10_i_need_image_to_add_to_herosectionthis_web_1.jpg" alt="Flatsome"
-                    class="product-image">
-                <div class="product-details">
-                    <h3 class="product-title">Space Explorer - A
-                        sci-fi adventure
-                        game that takes
-                        players on a space
-                        journey with minds cool game</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat cumque iusto deserunt!</p>
-                    <div class="product-meta">
-                        <span class="product-price">£3.99</span>
-                        <div class="product-actions">
-                            <a href="#" class="btn-preview">Live Preview</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="/images/Leonardo_Phoenix_10_Create_a_dramatic_landscape_image_for_the_2.jpg" alt="X Theme"
-                    class="product-image">
-                <div class="product-details">
-                    <h3 class="product-title">Chess Master - A
-                        classic chess game
-                        with advanced AI
-                        opponents with brainstroaming</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint autem odio repellendus!</p>
-                    <div class="product-meta">
-                        <span class="product-price">Free
-                        </span>
-                        <div class="product-actions">
-                            <a href="#" class="btn-preview">Live Preview</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="/images/Leonardo_Phoenix_09_Create_a_series_of_mystifying_futuristic_a_2.jpg" alt="Avada"
-                    class="product-image">
-                <div class="product-details">
-                    <h3 class="product-title">Fantasy Quest An
-                        immersive roleplaying game
-                        where players
-                        embark on epic
-                        adventures</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus optio debitis!</p>
-                    <div class="product-meta">
-                        <span class="product-price">Free</span>
-                        <div class="product-actions">
-                            <a href="#" class="btn-preview">Live Preview</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="/images/Leonardo_Phoenix_09_Create_a_series_of_mystifying_futuristic_a_2.jpg" alt="Avada"
-                    class="product-image">
-                <div class="product-details">
-                    <h3 class="product-title">Fantasy Quest An
-                        immersive roleplaying game
-                        where players
-                        embark on epic
-                        adventures</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus optio debitis!</p>
-                    <div class="product-meta">
-                        <span class="product-price">Free</span>
-                        <div class="product-actions">
-                            <a href="#" class="btn-preview">Live Preview</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="/images/Leonardo_Phoenix_09_Create_a_series_of_mystifying_futuristic_a_2.jpg" alt="Avada"
-                    class="product-image">
-                <div class="product-details">
-                    <h3 class="product-title">Fantasy Quest An
-                        immersive roleplaying game
-                        where players
-                        embark on epic
-                        adventures</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus optio debitis!</p>
-                    <div class="product-meta">
-                        <span class="product-price">Free</span>
-                        <div class="product-actions">
-                            <a href="#" class="btn-preview">Live Preview</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="/images/Leonardo_Phoenix_09_Create_a_series_of_mystifying_futuristic_a_2.jpg" alt="Avada"
-                    class="product-image">
-                <div class="product-details">
-                    <h3 class="product-title">Fantasy Quest An
-                        immersive roleplaying game
-                        where players
-                        embark on epic
-                        adventures</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus optio debitis!</p>
-                    <div class="product-meta">
-                        <span class="product-price">Free</span>
-                        <div class="product-actions">
-                            <a href="#" class="btn-preview">Live Preview</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="/images/Leonardo_Phoenix_09_Create_a_series_of_mystifying_futuristic_a_2.jpg" alt="Avada"
-                    class="product-image">
-                <div class="product-details">
-                    <h3 class="product-title">Fantasy Quest An
-                        immersive roleplaying game
-                        where players
-                        embark on epic
-                        adventures</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus optio debitis!</p>
-                    <div class="product-meta">
-                        <span class="product-price">Free</span>
-                        <div class="product-actions">
-                            <a href="#" class="btn-preview">Live Preview</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="/images/Leonardo_Phoenix_09_Create_a_series_of_mystifying_futuristic_a_2.jpg" alt="Avada"
-                    class="product-image">
-                <div class="product-details">
-                    <h3 class="product-title">Fantasy Quest An
-                        immersive roleplaying game
-                        where players
-                        embark on epic
-                        adventures</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus optio debitis!</p>
-                    <div class="product-meta">
-                        <span class="product-price">Free</span>
-                        <div class="product-actions">
-                            <a href="#" class="btn-preview">Live Preview</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="/images/Leonardo_Phoenix_09_Create_a_series_of_mystifying_futuristic_a_2.jpg" alt="Avada"
-                    class="product-image">
-                <div class="product-details">
-                    <h3 class="product-title">Fantasy Quest An
-                        immersive roleplaying game
-                        where players
-                        embark on epic
-                        adventures</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus optio debitis!</p>
-                    <div class="product-meta">
-                        <span class="product-price">Free</span>
-                        <div class="product-actions">
-                            <a href="#" class="btn-preview">Live Preview</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="/images/Leonardo_Phoenix_09_Create_a_series_of_mystifying_futuristic_a_2.jpg" alt="Avada"
-                    class="product-image">
-                <div class="product-details">
-                    <h3 class="product-title">Fantasy Quest An
-                        immersive roleplaying game
-                        where players
-                        embark on epic
-                        adventures</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus optio debitis!</p>
-                    <div class="product-meta">
-                        <span class="product-price">Free</span>
-                        <div class="product-actions">
-                            <a href="#" class="btn-preview">Live Preview</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="/images/Leonardo_Phoenix_09_Create_a_series_of_mystifying_futuristic_a_2.jpg" alt="Avada"
-                    class="product-image">
-                <div class="product-details">
-                    <h3 class="product-title">Fantasy Quest An
-                        immersive roleplaying game
-                        where players
-                        embark on epic
-                        adventures</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus optio debitis!</p>
-                    <div class="product-meta">
-                        <span class="product-price">Free</span>
-                        <div class="product-actions">
-                            <a href="#" class="btn-preview">Live Preview</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </body>
-      <!--Footer--> 
-<section class="footer">
-    <div class="footer-row">
-      <div class="footer-col">
-        <h4>Info</h4>
-        <ul class="links">
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Compressions</a></li>
-          <li><a href="#">Customers</a></li>
-        
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Explore</h4>
-        <ul class="links">
-          <li><a href="#">Free Designs</a></li>
-          <li><a href="#">Latest Designs</a></li>
-          <li><a href="#">Themes</a></li>
-       
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Legal</h4>
-        <ul class="links">
-          <li><a href="#">Customer Agreement</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">GDPR</a></li>
-          
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Newsletter</h4>
-        <p>
-          Subscribe to our newsletter for a weekly dose
-          of news, updates, helpful tips, and
-          exclusive offers.
-        </p>
-        <form action="#">
-          <input type="text" placeholder="Your email" required>
-          <button type="submit">SUBSCRIBE</button>
-        </form>
-        <div class="icons">
-          <i class="fa-brands fa-facebook-f"></i>
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands fa-linkedin"></i>
-          <i class="fa-brands fa-github"></i>
         </div>
-      </div>
-    </div>
-  
-  </section> 
 
-  <script defer src="js/script.js"></script>
-  <script src="js/MainGamePageJS.js"></script>
+
+    </section>
+
+
+    <!--Games products 15-->
+    <section class="Game-product-grid" id="GamesList">
+        <div class="product-card">
+            <img src="/images/Fantasy_Quest_Game.jpg"
+                class="product-image">
+            <div class="product-details">
+                <h3 class="product-title">Fantasy Quest An
+                    immersive roleplaying game
+                    where players
+                    embark on epic
+                    adventures</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus optio debitis!</p>
+                <div class="product-meta">
+                    <span class="product-price">Free</span>
+                    <div class="product-actions">
+                        <a href="#" class="btn-preview">Discover More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="/images/Speed_Racer_Game.jpg"
+                class="product-image">
+            <div class="product-details">
+                <h3 class="product-title">Speed Racer - A
+                    high-speed racing
+                    game with realistic
+                    graphics and
+                    challenging tracks. </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque perspiciatis ad minus.</p>
+                <div class="product-meta">
+                    <span class="product-price">£4.99</span>
+                    <div class="product-actions">
+                        <a href="#" class="btn-preview">Discover More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="/images/Leonardo_Phoenix_10_Create_a_dramatic_landscape_image_for_the_2.jpg" alt="Betheme"
+                class="product-image">
+            <div class="product-details">
+                <h3 class="product-title">Puzzle Master - A
+                    brain-teasing
+                    puzzle game with
+                    varying levels of
+                    difficulty with mind stroming game.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis velit reiciendis quia.</p>
+                <div class="product-meta">
+                    <span class="product-price">Free</span> <br />
+
+                    <div class="product-actions">
+                        <a href="#" class="btn-preview">Live Preview</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="/images/Leonardo_Phoenix_10_i_need_image_to_add_to_herosectionthis_web_0.jpg" alt="Enfold"
+                class="product-image">
+            <div class="product-details">
+                <h3 class="product-title">Mystery Mansion -
+                    A hidden object
+                    game set in a
+                    spooky mansion
+                    filled with secrets in game world </h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda nobis commodi corporis.</p>
+                <div class="product-meta">
+                    <span class="product-price"> £1.99</span>
+                    <div class="product-actions">
+                        <a href="#" class="btn-preview">Live Preview</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="/images/Leonardo_Phoenix_10_i_need_image_to_add_to_herosectionthis_web_1.jpg" alt="Flatsome"
+                class="product-image">
+            <div class="product-details">
+                <h3 class="product-title">Space Explorer - A
+                    sci-fi adventure
+                    game that takes
+                    players on a space
+                    journey with minds cool game</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat cumque iusto deserunt!</p>
+                <div class="product-meta">
+                    <span class="product-price">£3.99</span>
+                    <div class="product-actions">
+                        <a href="#" class="btn-preview">Live Preview</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="/images/Leonardo_Phoenix_10_Create_a_dramatic_landscape_image_for_the_2.jpg" alt="X Theme"
+                class="product-image">
+            <div class="product-details">
+                <h3 class="product-title">Chess Master - A
+                    classic chess game
+                    with advanced AI
+                    opponents with brainstroaming</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint autem odio repellendus!</p>
+                <div class="product-meta">
+                    <span class="product-price">Free
+                    </span>
+                    <div class="product-actions">
+                        <a href="#" class="btn-preview">Live Preview</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="/images/Leonardo_Phoenix_09_Create_a_series_of_mystifying_futuristic_a_2.jpg" alt="Avada"
+                class="product-image">
+            <div class="product-details">
+                <h3 class="product-title">Fantasy Quest An
+                    immersive roleplaying game
+                    where players
+                    embark on epic
+                    adventures</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus optio debitis!</p>
+                <div class="product-meta">
+                    <span class="product-price">Free</span>
+                    <div class="product-actions">
+                        <a href="#" class="btn-preview">Live Preview</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="/images/Leonardo_Phoenix_09_Create_a_series_of_mystifying_futuristic_a_2.jpg" alt="Avada"
+                class="product-image">
+            <div class="product-details">
+                <h3 class="product-title">Fantasy Quest An
+                    immersive roleplaying game
+                    where players
+                    embark on epic
+                    adventures</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus optio debitis!</p>
+                <div class="product-meta">
+                    <span class="product-price">Free</span>
+                    <div class="product-actions">
+                        <a href="#" class="btn-preview">Live Preview</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="/images/Leonardo_Phoenix_09_Create_a_series_of_mystifying_futuristic_a_2.jpg" alt="Avada"
+                class="product-image">
+            <div class="product-details">
+                <h3 class="product-title">Fantasy Quest An
+                    immersive roleplaying game
+                    where players
+                    embark on epic
+                    adventures</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus optio debitis!</p>
+                <div class="product-meta">
+                    <span class="product-price">Free</span>
+                    <div class="product-actions">
+                        <a href="#" class="btn-preview">Live Preview</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="/images/Leonardo_Phoenix_09_Create_a_series_of_mystifying_futuristic_a_2.jpg" alt="Avada"
+                class="product-image">
+            <div class="product-details">
+                <h3 class="product-title">Fantasy Quest An
+                    immersive roleplaying game
+                    where players
+                    embark on epic
+                    adventures</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus optio debitis!</p>
+                <div class="product-meta">
+                    <span class="product-price">Free</span>
+                    <div class="product-actions">
+                        <a href="#" class="btn-preview">Live Preview</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="/images/Leonardo_Phoenix_09_Create_a_series_of_mystifying_futuristic_a_2.jpg" alt="Avada"
+                class="product-image">
+            <div class="product-details">
+                <h3 class="product-title">Fantasy Quest An
+                    immersive roleplaying game
+                    where players
+                    embark on epic
+                    adventures</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus optio debitis!</p>
+                <div class="product-meta">
+                    <span class="product-price">Free</span>
+                    <div class="product-actions">
+                        <a href="#" class="btn-preview">Live Preview</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="/images/Leonardo_Phoenix_09_Create_a_series_of_mystifying_futuristic_a_2.jpg" alt="Avada"
+                class="product-image">
+            <div class="product-details">
+                <h3 class="product-title">Fantasy Quest An
+                    immersive roleplaying game
+                    where players
+                    embark on epic
+                    adventures</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus optio debitis!</p>
+                <div class="product-meta">
+                    <span class="product-price">Free</span>
+                    <div class="product-actions">
+                        <a href="#" class="btn-preview">Live Preview</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="/images/Leonardo_Phoenix_09_Create_a_series_of_mystifying_futuristic_a_2.jpg" alt="Avada"
+                class="product-image">
+            <div class="product-details">
+                <h3 class="product-title">Fantasy Quest An
+                    immersive roleplaying game
+                    where players
+                    embark on epic
+                    adventures</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus optio debitis!</p>
+                <div class="product-meta">
+                    <span class="product-price">Free</span>
+                    <div class="product-actions">
+                        <a href="#" class="btn-preview">Live Preview</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="/images/Leonardo_Phoenix_09_Create_a_series_of_mystifying_futuristic_a_2.jpg" alt="Avada"
+                class="product-image">
+            <div class="product-details">
+                <h3 class="product-title">Fantasy Quest An
+                    immersive roleplaying game
+                    where players
+                    embark on epic
+                    adventures</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus optio debitis!</p>
+                <div class="product-meta">
+                    <span class="product-price">Free</span>
+                    <div class="product-actions">
+                        <a href="#" class="btn-preview">Live Preview</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="/images/Leonardo_Phoenix_09_Create_a_series_of_mystifying_futuristic_a_2.jpg" alt="Avada"
+                class="product-image">
+            <div class="product-details">
+                <h3 class="product-title">Fantasy Quest An
+                    immersive roleplaying game
+                    where players
+                    embark on epic
+                    adventures</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus optio debitis!</p>
+                <div class="product-meta">
+                    <span class="product-price">Free</span>
+                    <div class="product-actions">
+                        <a href="#" class="btn-preview">Live Preview</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+
+    <section class="news-section">
+        <div class="section-header">
+            <h2>Latest Gaming News</h2>
+            <p>Stay updated with the hottest news from the gaming world</p>
+        </div>
+        <div class="container">
+
+
+            <div class="news-container">
+                <!-- News 1 -->
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="/api/placeholder/600/400" alt="Console News">
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category">Hardware</span>
+                        <h3>Next-Gen Console Features Leaked Ahead of Official Announcement</h3>
+                        <p>Industry insiders reveal groundbreaking features of the upcoming console generation...</p>
+                        <div class="news-meta">
+                            <span>March 25, 2025</span>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News 2 -->
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="/api/placeholder/600/400" alt="Esports News">
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category">Esports</span>
+                        <h3>Team Phantom Secures Historic Championship Win in Dramatic Finals</h3>
+                        <p>Underdog team stuns competitors with unprecedented comeback in the final round...</p>
+                        <div class="news-meta">
+                            <span>March 22, 2025</span>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News 3 -->
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="/api/placeholder/600/400" alt="Game Release">
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category">New Release</span>
+                        <h3>Highly Anticipated RPG 'Chronicles of Eternity' Finally Gets Release Date</h3>
+                        <p>After years of development, the revolutionary open-world RPG is set to launch...</p>
+                        <div class="news-meta">
+                            <span>March 19, 2025</span>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News 4 -->
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="/api/placeholder/600/400" alt="Industry News">
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category">Industry</span>
+                        <h3>Major Gaming Studios Collaborate on Revolutionary AI-Powered Gaming Engine</h3>
+                        <p>Top developers join forces to create next-generation technology that promises to transform
+                            gaming...</p>
+                        <div class="news-meta">
+                            <span>March 17, 2025</span>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Footer-->
+    <section class="footer">
+        <div class="footer-row">
+            <div class="footer-col">
+                <h4>Info</h4>
+                <ul class="links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Compressions</a></li>
+                    <li><a href="#">Customers</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul class="links">
+                    <li><a href="#">Free Designs</a></li>
+                    <li><a href="#">Latest Designs</a></li>
+                    <li><a href="#">Themes</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul class="links">
+                    <li><a href="#">Customer Agreement</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">GDPR</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p>
+                    Subscribe to our newsletter for a weekly dose
+                    of news, updates, helpful tips, and
+                    exclusive offers.
+                </p>
+                <form action="#">
+                    <input type="text" placeholder="Your email" required>
+                    <button type="submit">SUBSCRIBE</button>
+                </form>
+                <div class="icons">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-github"></i>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script defer src="js/script.js"></script>
+    <script src="js/MainGamePageJS.js"></script>
 </body>
+
 </html>
